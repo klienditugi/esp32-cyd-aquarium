@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#071b2b">
+<title>CYD Pixel Aquarium | Web Installer</title>
+<script type="module" src="https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module"></script>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+body{margin:0;background:radial-gradient(ellipse at top,#155579,#061420 70%);color:#effaff}
+main{max-width:680px;margin:5vh auto;padding:25px;text-align:center}
+h1{font-size:clamp(32px,6vw,52px);margin-bottom:10px}
+p{color:#bad7e5;line-height:1.6}
+.card{background:#102d40;border:1px solid #37708b;border-radius:22px;padding:30px;margin-top:35px}
+button{background:#2bd0e8;border:0;border-radius:12px;padding:17px 35px;font-size:18px;font-weight:750;color:#032636;cursor:pointer}
+button:hover{background:#8befff}
+ol{text-align:left;max-width:450px;margin:25px auto;line-height:1.85;color:#c7e1ec}
+.warning{color:#f6d5a0}
+footer{margin:35px 0;font-size:13px}a{color:#8ee8ff}
+</style>
+</head>
+<body><main>
+<div style="font-size:66px">🐠</div>
+<h1>CYD Pixel Aquarium</h1>
+<p>Turn your Cheap Yellow Display into a living pixel aquarium. Install firmware directly from your browser.</p>
+<section class="card">
+<h2>ESP32-2432S028R</h2>
+<p>For the standard 2.8-inch ESP32 Cheap Yellow Display. Other CYD variants are not supported by this build.</p>
+<esp-web-install-button manifest="./manifest.json">
+<button slot="activate">Install Aquarium</button>
+<span slot="unsupported">Use desktop Chrome or Edge with USB serial support.</span>
+<span slot="not-allowed">This installer requires HTTPS.</span>
+</esp-web-install-button>
+<ol><li>Connect the CYD with a USB <strong>data</strong> cable.</li><li>Close programs using its serial port.</li><li>Click Install Aquarium and choose the correct port.</li><li>Follow the installer prompts, then restart your device if needed.</li></ol>
+<p class="warning">Flashing can erase the board's existing firmware and saved data.</p>
+</section>
+<footer>Firmware by <a href="https://github.com/Lagerpun/esp32-cyd-aquarium">Lagerpun</a> · <a href="https://github.com/Lagerpun/esp32-cyd-aquarium/blob/main/LICENSE">AGPL-3.0</a> · Powered by ESP Web Tools</footer>
+</main></body></html>
