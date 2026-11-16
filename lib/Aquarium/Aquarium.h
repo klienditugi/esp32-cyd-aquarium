@@ -5,7 +5,7 @@
 #include <Fonts/Font4x7Fixed.h>
 #include <Fonts/Font5x7Fixed.h>
 #include <Matrix.h>
-#include <scd40.h>
+#include <SDC40.h>
 
 #include <vector>
 
